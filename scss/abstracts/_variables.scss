@@ -3,13 +3,12 @@
 
 :root {
 	/* Colors */
-	--clr-primary-100: hsla(12, 88%, 59%, 1);
-	--clr-primary-200: hsla(228, 39%, 23%, 1);
+	--clr-primary-100: hsla(345, 95%, 68%, 1);
+	--clr-primary-200: hsla(237, 18%, 59%, 1);
 	--clr-neutral-100: hsla(0, 0%, 98%, 1);
-	--clr-neutral-200: hsla(13, 100%, 96%, 1);
-	--clr-neutral-300: hsla(227, 12%, 61%, 1);
-	--clr-neutral-400: hsla(233, 12%, 13%, 1);
-	--clr-neutral-500: hsla(0, 0%, 0%, 1);
+	--clr-neutral-200: hsla(236, 21%, 26%, 1);
+	--clr-neutral-300: hsla(235, 16%, 14%, 1);
+	--clr-neutral-400: hsla(234, 17%, 12%, 1);
 
 	/* Spacing */
 	--spacer: 1em;
@@ -23,5 +22,5 @@
 	--step-4: clamp(2.07rem, 1.55rem + 2.22vw, 3.55rem);
 
 	/* Font-families */
-	--ff-body: "Be Vietnam", sans-serif;
+	--ff-body: "Red Hat Text", sans-serif;
 }

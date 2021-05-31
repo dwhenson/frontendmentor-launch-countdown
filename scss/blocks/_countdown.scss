@@ -1,8 +1,14 @@
 .app {
 	display: flex;
-	gap: 0.5em;
-	margin-top: 0.25em;
-	font-size: 3rem;
+	gap: 1em;
+	max-width: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: var(--step-4);
 	font-weight: 700;
 	text-align: center;
+}
+
+.period {
+	font-size: var(--step--1);
 }

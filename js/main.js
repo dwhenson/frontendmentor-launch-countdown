@@ -19,19 +19,19 @@ const countdownEnd = new Date(Date.now() + 12096e5).getTime();
 function renderHTML(days, hours, minutes, seconds) {
 	app.innerHTML = `
 		<div>
-			<p>${days}</p>
+			<p class="flip-card">${days}</p>
 			<p id="days" class="period">Days</p>
 		</div>
 		<div>
-			<p>${hours}</p>
+			<p class="flip-card">${hours}</p>
 			<p id="hours" class="period">Hours</p>
 		</div>
 		<div>
-			<p>${minutes}</p>
+			<p class="flip-card">${minutes}</p>
 			<p id="minutes" class="period">Minutes</p>
 		</div>
 		<div>
-			<p>${seconds}</p>
+			<p class="flip-card">${seconds}</p>
 			<p id="seconds" class="period">Seconds</p>
 		</div>
 	`;

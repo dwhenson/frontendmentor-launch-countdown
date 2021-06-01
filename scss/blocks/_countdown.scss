@@ -1,14 +1,43 @@
-.app {
-	display: flex;
-	gap: 1em;
-	max-width: fit-content;
-	margin-right: auto;
-	margin-left: auto;
-	font-size: var(--step-4);
-	font-weight: 700;
-	text-align: center;
+.wrapper {
+	width: 100%;
+
+	@include respond-to("medium") {
+		max-width: fit-content;
+	}
 }
 
-.period {
-	font-size: var(--step--1);
+.app {
+	display: flex;
+	gap: 0.25em;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: var(--step-2);
+	font-weight: 700;
+	text-align: center;
+	color: var(--clr-primary-100);
+
+	@include respond-to("medium") {
+		gap: 2rem;
+	}
+
+	> div {
+		flex: 1;
+		min-width: 3ch;
+	}
+
+	.flip-card {
+		padding: 0.5em;
+		background-color: var(--clr-neutral-200);
+	}
+
+	.period {
+		margin-top: 2rem;
+		font-size: var(--step--2);
+		letter-spacing: 4px;
+		color: var(--clr-primary-200);
+
+		@include respond-to("medium") {
+			font-size: var(--step--1);
+		}
+	}
 }

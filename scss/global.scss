@@ -12,6 +12,8 @@
 
 body {
 	background-color: var(--clr-neutral-300);
+	background-image: url("../images/bg-stars.svg");
+	background-size: contain;
 	font-family: var(--ff-body);
 	letter-spacing: 2px;
 	text-align: center;
@@ -28,13 +30,7 @@ h1 {
 main {
 	display: grid;
 	place-items: center;
-	height: 70vh;
-}
-
-footer {
-	display: grid;
-	place-items: center;
-	height: 30vh;
+	height: 85vh;
 }
 
 /* ==================================================

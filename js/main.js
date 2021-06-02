@@ -17,8 +17,8 @@ const countdownEnd = new Date(Date.now() + 12096e5).getTime();
  * @param      {String}  seconds  The number of seconds
  */
 function renderHTML(days, hours, minutes, seconds) {
-	app.innerHTML = `
-		<div>
+	app.innerHTML = /* html */ `
+	<div>
 			<p class="flip-card">${days}</p>
 			<p id="days" class="period">Days</p>
 		</div>

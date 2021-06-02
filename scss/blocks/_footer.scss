@@ -1,4 +1,19 @@
-.icons {
-	display: flex;
-	gap: 2rem;
+.footer {
+	display: grid;
+	grid-column: 1 / -1;
+	place-items: center;
+	height: 15vh;
+	background-image: url("../images/pattern-hills.svg");
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.icons {
+		display: flex;
+		gap: 2rem;
+
+		svg:hover path {
+			fill: var(--clr-primary-100);
+		}
+	}
 }

@@ -118,6 +118,8 @@ select {
    ================================================== */
 body {
   background-color: var(--clr-neutral-300);
+  background-image: url("../images/bg-stars.svg");
+  background-size: contain;
   font-family: var(--ff-body);
   letter-spacing: 2px;
   text-align: center;
@@ -134,13 +136,7 @@ h1 {
 main {
   display: grid;
   place-items: center;
-  height: 70vh;
-}
-
-footer {
-  display: grid;
-  place-items: center;
-  height: 30vh;
+  height: 85vh;
 }
 
 /* ==================================================
@@ -203,7 +199,20 @@ footer {
   }
 }
 
-.icons {
+.footer {
+  display: grid;
+  grid-column: 1/-1;
+  place-items: center;
+  height: 15vh;
+  background-image: url("../images/pattern-hills.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer .icons {
   display: flex;
   gap: 2rem;
+}
+.footer .icons svg:hover path {
+  fill: var(--clr-primary-100);
 }

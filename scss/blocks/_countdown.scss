@@ -25,9 +25,53 @@
 		min-width: 3ch;
 	}
 
-	.flip-card {
-		padding: 0.5em;
-		background-color: var(--clr-neutral-200);
+	.card-wrapper {
+		display: grid;
+		background-color: var(--clr-neutral-400);
+		transform: rotateY(0deg);
+		// transform-origin: bottom;
+		// transform-style: preserve-3d;
+		// transition: all 1000ms ease-in;
+
+		&:hover .top {
+			transform: rotateX(-180deg);
+		}
+
+		&:hover .bottom {
+			transform: rotateX(-180deg);
+		}
+
+		.flip-card {
+			grid-area: 1 / -1 / 1 / -1;
+			height: 50%;
+			padding: 0.5em;
+			overflow: hidden;
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+			transition: all 250ms linear;
+		}
+
+		.top {
+			align-self: start;
+			border-radius: 0.5rem;
+			background-color: hsla(238, 21%, 22%, 1);
+			backface-visibility: visible;
+			transform-origin: bottom;
+		}
+
+		.bottom {
+			position: relative;
+			align-self: end;
+			border-radius: 0.5rem;
+			background-color: hsla(236, 21%, 26%, 1);
+			backface-visibility: hidden;
+			transform-origin: top;
+
+			.text {
+				position: absolute;
+				transform: translateY(-95%);
+			}
+		}
 	}
 
 	.period {

@@ -17,23 +17,43 @@ const countdownEnd = new Date(Date.now() + 12096e5).getTime();
  * @param      {String}  seconds  The number of seconds
  */
 function renderHTML(days, hours, minutes, seconds) {
-	app.innerHTML = /* html */ `
+	app.innerHTML = `
 	<div>
-			<p class="flip-card">${days}</p>
-			<p id="days" class="period">Days</p>
+		<div class="card-wrapper">
+			<div class="flip-card top">${days.toString().padStart(2, "0")}</div>
+			<div class="flip-card bottom">
+				<p class="text">${days.toString().padStart(2, "0")}</p>
+			</div>
 		</div>
-		<div>
-			<p class="flip-card">${hours}</p>
-			<p id="hours" class="period">Hours</p>
+		<p id="days" class="period">Days</p>
+	</div>
+	<div>
+		<div class="card-wrapper">
+			<div class="flip-card top">${hours.toString().padStart(2, "0")}</div>
+			<div class="flip-card bottom">
+				<p class="text">${hours.toString().padStart(2, "0")}</p>
+			</div>
 		</div>
-		<div>
-			<p class="flip-card">${minutes}</p>
-			<p id="minutes" class="period">Minutes</p>
+		<p id="hours" class="period">Hours</p>
+	</div>
+	<div>
+		<div class="card-wrapper">
+			<div class="flip-card top">${minutes.toString().padStart(2, "0")}</div>
+			<div class="flip-card bottom">
+				<p class="text">${minutes.toString().padStart(2, "0")}</p>
+			</div>
 		</div>
-		<div>
-			<p class="flip-card">${seconds}</p>
-			<p id="seconds" class="period">Seconds</p>
+		<p id="minutes" class="period">Minutes</p>
+	</div>
+	<div>
+		<div class="card-wrapper">
+			<div class="flip-card top">${seconds.toString().padStart(2, "0")}</div>
+			<div class="flip-card bottom">
+				<p class="text">${seconds.toString().padStart(2, "0")}</p>
+			</div>
 		</div>
+		<p id="seconds" class="period">Seconds</p>
+	</div>
 	`;
 }
 

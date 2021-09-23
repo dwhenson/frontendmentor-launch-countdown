@@ -1,87 +1,74 @@
 .wrapper {
-	width: 100%;
+  width: 100%;
 
-	@include respond-to("medium") {
-		max-width: fit-content;
-	}
+  @include respond-to("medium") {
+    max-width: fit-content;
+  }
 }
 
 .app {
-	display: flex;
-	gap: 0.25em;
-	margin-right: auto;
-	margin-left: auto;
-	font-size: var(--step-2);
-	font-weight: 700;
-	text-align: center;
-	color: var(--clr-primary-100);
+  display: flex;
+  gap: 0.25em;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: var(--step-2);
+  font-weight: 700;
+  text-align: center;
+  color: var(--clr-primary-100);
 
-	@include respond-to("medium") {
-		gap: 2rem;
-	}
+  @include respond-to("medium") {
+    gap: 2rem;
+  }
 
-	> div {
-		flex: 1;
-		min-width: 3ch;
-	}
+  > div {
+    flex: 1;
+    min-width: 3ch;
+  }
 
-	.card-wrapper {
-		display: grid;
-		background-color: var(--clr-neutral-400);
-		transform: rotateY(0deg);
-		// transform-origin: bottom;
-		// transform-style: preserve-3d;
-		// transition: all 1000ms ease-in;
+  .card-wrapper {
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.25rem 0.25rem rgb(0 0 0 / 50%);
+    background-color: hsla(234, 17%, 12%, 1);
+    perspective: 1000px;
 
-		&:hover .top {
-			transform: rotateX(-180deg);
-		}
+    .card-background {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      border-radius: 0.5rem;
+      overflow: hidden;
 
-		&:hover .bottom {
-			transform: rotateX(-180deg);
-		}
+      &.upper {
+        align-items: flex-end;
+        padding: 0.5em 0.5em 0 0.5em;
+        background-color: #353752;
 
-		.flip-card {
-			grid-area: 1 / -1 / 1 / -1;
-			height: 50%;
-			padding: 0.5em;
-			overflow: hidden;
-			transform: rotateY(0deg);
-			transform-style: preserve-3d;
-			transition: all 250ms linear;
-		}
+        .text {
+          transform: translateY(50%);
+        }
+      }
 
-		.top {
-			align-self: start;
-			border-radius: 0.5rem;
-			background-color: hsla(238, 21%, 22%, 1);
-			backface-visibility: visible;
-			transform-origin: bottom;
-		}
+      &.lower {
+        align-items: flex-start;
+        padding: 0 0.5em 0.5em 0.5em;
+        background-color: #3e4160;
 
-		.bottom {
-			position: relative;
-			align-self: end;
-			border-radius: 0.5rem;
-			background-color: hsla(236, 21%, 26%, 1);
-			backface-visibility: hidden;
-			transform-origin: top;
+        .text {
+          transform: translateY(-50%);
+        }
+      }
+    }
 
-			.text {
-				position: absolute;
-				transform: translateY(-95%);
-			}
-		}
-	}
+    .period {
+      margin-top: 2rem;
+      font-size: var(--step--2);
+      letter-spacing: 4px;
+      color: var(--clr-primary-200);
 
-	.period {
-		margin-top: 2rem;
-		font-size: var(--step--2);
-		letter-spacing: 4px;
-		color: var(--clr-primary-200);
-
-		@include respond-to("medium") {
-			font-size: var(--step--1);
-		}
-	}
+      @include respond-to("medium") {
+        font-size: var(--step--1);
+      }
+    }
+  }
 }

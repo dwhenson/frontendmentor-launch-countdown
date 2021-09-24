@@ -2,24 +2,25 @@
    	================================================== */
 
 :root {
-	/* Colors */
-	--clr-primary-100: hsla(345, 95%, 68%, 1);
-	--clr-primary-200: hsla(237, 18%, 59%, 1);
-	--clr-neutral-100: hsla(0, 0%, 98%, 1);
-	--clr-neutral-200: hsla(236, 21%, 26%, 1);
-	--clr-neutral-300: hsla(235, 16%, 14%, 1);
-	--clr-neutral-400: hsla(234, 17%, 12%, 1);
+  /* Colors */
+  --clr-primary-100: hsla(345, 95%, 68%, 1);
+  --clr-primary-200: hsla(237, 18%, 59%, 1);
+  --clr-neutral-100: hsla(0, 0%, 98%, 1);
+  --clr-neutral-200: hsla(236, 21%, 26%, 1);
+  --clr-neutral-300: hsla(235, 16%, 14%, 1);
+  --clr-neutral-400: hsla(234, 17%, 12%, 1);
 
-	/* Spacing */
-	--spacer: 1em;
+  /* Spacing */
+  --spacer: 1em;
 
-	/* Font sizes */
-	--step--2: clamp(0.64rem, 0.68rem + -0.21vw, 0.5rem);
-	--step--1: clamp(0.8rem, 0.79rem + 0.04vw, 0.83rem);
-	--step-0: clamp(1rem, 0.89rem + 0.54vw, 1.38rem);
-	--step-1: clamp(1.25rem, 0.95rem + 1.49vw, 2.29rem);
-	--step-2: clamp(1.56rem, 0.92rem + 3.23vw, 3.82rem);
+  /* Font sizes */
+  --step--2: clamp(0.64rem, 0.68rem + -0.21vw, 0.5rem);
+  --step--1: clamp(0.8rem, 0.79rem + 0.04vw, 0.83rem);
+  --step-0: clamp(1rem, 0.89rem + 0.54vw, 1.38rem);
+  --step-1: clamp(1.25rem, 0.95rem + 1.49vw, 2.29rem);
+  --step-2: clamp(1.56rem, 0.92rem + 3.23vw, 3.82rem);
+  --step-3: clamp(2.26rem, 0.92rem + 3.23vw, 4.82rem);
 
-	/* Font-families */
-	--ff-body: "Red Hat Text", sans-serif;
+  /* Font-families */
+  --ff-body: "Red Hat Text", sans-serif;
 }

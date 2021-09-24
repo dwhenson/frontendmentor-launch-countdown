@@ -8,10 +8,12 @@
 
 .app {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.25em;
   margin-right: auto;
   margin-left: auto;
-  font-size: var(--step-2);
+  font-size: var(--step-3);
   font-weight: 700;
   text-align: center;
   color: var(--clr-primary-100);
@@ -28,7 +30,7 @@
   .card-wrapper {
     position: relative;
     border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.25rem 0.25rem rgb(0 0 0 / 50%);
+    box-shadow: 0 0.25rem 0.25rem 0.25rem rgb(0 0 0 / 20%);
     background-color: hsla(234, 17%, 12%, 1);
     perspective: 1000px;
 
@@ -41,7 +43,7 @@
 
       &.upper {
         align-items: flex-end;
-        padding: 0.5em 0.5em 0 0.5em;
+        padding: 0 2rem 0 2rem;
         background-color: #353752;
 
         .text {
@@ -51,7 +53,7 @@
 
       &.lower {
         align-items: flex-start;
-        padding: 0 0.5em 0.5em 0.5em;
+        padding: 0 2rem 0 2rem;
         background-color: #3e4160;
 
         .text {
@@ -60,15 +62,73 @@
       }
     }
 
-    .period {
-      margin-top: 2rem;
-      font-size: var(--step--2);
-      letter-spacing: 4px;
-      color: var(--clr-primary-200);
+    .flip-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      height: 50%;
+      transform: rotateX(0deg);
+      transform-origin: bottom;
+      transform-style: preserve-3d;
+      // animation: flip 800ms 200ms ease-in-out infinite both;
 
-      @include respond-to("medium") {
-        font-size: var(--step--1);
+      .flip-card {
+        position: absolute;
+        display: flex;
+        top: 0;
+        right: 0;
+        left: 0;
+        justify-content: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transform-origin: bottom;
+
+        &.front {
+          align-items: flex-end;
+          padding: 0 2rem 0 2rem;
+          background-color: #343650;
+          backface-visibility: hidden;
+
+          .text {
+            transform: translateY(50%);
+          }
+        }
+
+        &.back {
+          align-items: flex-start;
+          padding: 0 2rem 0 2rem;
+          background-color: #3e4160;
+          transform: rotateY(180deg) rotateZ(180deg);
+          transform-origin: center;
+
+          .text {
+            transform: translateY(-50%);
+          }
+        }
       }
     }
+  }
+
+  .period {
+    margin-top: 2rem;
+    font-size: var(--step--2);
+    letter-spacing: 4px;
+    color: var(--clr-primary-200);
+
+    @include respond-to("medium") {
+      font-size: var(--step--1);
+    }
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(-180deg);
   }
 }

@@ -11,26 +11,26 @@
    ================================================== */
 
 body {
-	background-color: var(--clr-neutral-300);
-	background-image: url("../images/bg-stars.svg");
-	background-size: contain;
-	font-family: var(--ff-body);
-	letter-spacing: 2px;
-	text-align: center;
-	text-transform: uppercase;
+  background-color: var(--clr-neutral-300);
+  background-image: url("../images/bg-stars.svg");
+  background-size: contain;
+  font-family: var(--ff-body);
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h1 {
-	margin-bottom: 6rem;
-	font-size: var(--step-0);
-	letter-spacing: 6px;
-	color: var(--clr-neutral-100);
+  margin-bottom: 6rem;
+  font-size: var(--step-0);
+  letter-spacing: 6px;
+  color: var(--clr-neutral-100);
 }
 
 main {
-	display: grid;
-	place-items: center;
-	height: 85vh;
+  display: grid;
+  place-items: center;
+  height: 85vh;
 }
 
 /* ==================================================
@@ -38,22 +38,10 @@ main {
 	================================================== */
 
 @import "utilities/center-content";
-// @import "utilities/container";
-// @import "utilities/cta";
-// @import "utilities/flow-content";
-// @import "utilities/flow-section";
-// @import "utilities/outline";
-// @import "utilities/skip-link";
-// @import "utilities/split";
-// @import "utilities/visually-hidden";
 
 /* ==================================================
    Blocks
    ================================================== */
 
-// @import "blocks/navigation";
-// @import "blocks/intro";
-// @import "blocks/different";
-// @import "blocks/feedback";
 @import "blocks/countdown";
 @import "blocks/footer";

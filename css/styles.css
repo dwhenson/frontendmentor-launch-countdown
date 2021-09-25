@@ -147,7 +147,7 @@ main {
 .center-content {
   display: grid;
   grid-template-rows: min-content;
-  grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1440px) minmax(1rem, 1fr);
+  grid-template-columns: minmax(0.5rem, 1fr) minmax(0.5rem, 1440px) minmax(0.5rem, 1fr);
 }
 .center-content > * {
   grid-column: 2;
@@ -159,16 +159,12 @@ main {
 .wrapper {
   width: 100%;
 }
-@media (min-width: 45em) {
-  .wrapper {
-    max-width: fit-content;
-  }
-}
 
 .app {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.25em;
   margin-right: auto;
   margin-left: auto;
@@ -183,8 +179,9 @@ main {
   }
 }
 .app > div {
-  flex: 1;
+  flex-basis: 100%;
   min-width: 3ch;
+  max-width: 5ch;
 }
 .app .card-wrapper {
   position: relative;
@@ -202,7 +199,7 @@ main {
 }
 .app .card-wrapper .card-background.upper {
   align-items: flex-end;
-  padding: 0 2rem 0 2rem;
+  padding: 0.5rem 2rem 0 2rem;
   background-color: #353752;
 }
 .app .card-wrapper .card-background.upper .text {
@@ -210,7 +207,8 @@ main {
 }
 .app .card-wrapper .card-background.lower {
   align-items: flex-start;
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem 0.5rem 2rem;
+  box-shadow: inset 0 4px 9px -6px #191a24;
   background-color: #3e4160;
 }
 .app .card-wrapper .card-background.lower .text {
@@ -226,6 +224,7 @@ main {
   transform: rotateX(0deg);
   transform-origin: bottom;
   transform-style: preserve-3d;
+  animation: flip 900ms var(--delay) infinite ease-in-out both;
 }
 .app .card-wrapper .flip-wrapper .flip-card {
   position: absolute;
@@ -240,7 +239,7 @@ main {
 }
 .app .card-wrapper .flip-wrapper .flip-card.front {
   align-items: flex-end;
-  padding: 0 2rem 0 2rem;
+  padding: 0.5rem 2rem 0 2rem;
   background-color: #343650;
   backface-visibility: hidden;
 }
@@ -249,7 +248,7 @@ main {
 }
 .app .card-wrapper .flip-wrapper .flip-card.back {
   align-items: flex-start;
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem 0.5rem 2rem;
   background-color: #3e4160;
   transform: rotateY(180deg) rotateZ(180deg);
   transform-origin: center;

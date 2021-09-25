@@ -19,7 +19,7 @@ Functions
 function renderHTML(days, hours, minutes, seconds) {
   app.innerHTML = `
   <div>
-    <div class="card-wrapper">
+    <div class="card-wrapper" style="--delay: 86399900ms">
       <div class="card-background upper">
         <span class="text">${days.toString().padStart(2, "0")}</span>
       </div>
@@ -38,7 +38,7 @@ function renderHTML(days, hours, minutes, seconds) {
     <p id="days" class="period">Days</p>
   </div>
   <div>
-    <div class="card-wrapper">
+    <div class="card-wrapper" style="--delay: 3599900ms">
       <div class="card-background upper">
         <span class="text">${hours.toString().padStart(2, "0")}</span>
       </div>
@@ -64,7 +64,7 @@ function renderHTML(days, hours, minutes, seconds) {
       <div class="card-background lower">
         <span class="text">${minutes.toString().padStart(2, "0")}</span>
       </div>
-      <div class="flip-wrapper">
+      <div class="flip-wrapper" style="--delay: 5900ms">
         <div class="flip-card front">
           <span class="text">${minutes.toString().padStart(2, "0")}</span>
         </div>
@@ -76,14 +76,14 @@ function renderHTML(days, hours, minutes, seconds) {
     <p id="minutes" class="period">Minutes</p>
   </div>
   <div>
-    <div class="card-wrapper">
+    <div class="card-wrapper" >
       <div class="card-background upper">
         <span class="text">${seconds.toString().padStart(2, "0")}</span>
       </div>
       <div class="card-background lower">
         <span class="text">${seconds.toString().padStart(2, "0")}</span>
       </div>
-      <div class="flip-wrapper">
+      <div class="flip-wrapper" style="--delay: 100ms">
         <div class="flip-card front">
           <span class="text">${seconds.toString().padStart(2, "0")}</span>
         </div>
@@ -114,8 +114,8 @@ function convertMS(milliseconds) {
 /**
  * Calculate the time difference every second
  */
-// setInterval(() => {
-//   const now = new Date().getTime();
-//   const timeDifference = countdownEnd - now;
-//   convertMS(timeDifference);
-// }, 1000);
+setInterval(() => {
+  const now = new Date().getTime();
+  const timeDifference = countdownEnd - now;
+  convertMS(timeDifference);
+}, 1000);

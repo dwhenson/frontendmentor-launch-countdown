@@ -1,15 +1,12 @@
 .wrapper {
   width: 100%;
-
-  @include respond-to("medium") {
-    max-width: fit-content;
-  }
 }
 
 .app {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.25em;
   margin-right: auto;
   margin-left: auto;
@@ -23,8 +20,9 @@
   }
 
   > div {
-    flex: 1;
+    flex-basis: 100%;
     min-width: 3ch;
+    max-width: 5ch;
   }
 
   .card-wrapper {
@@ -43,7 +41,7 @@
 
       &.upper {
         align-items: flex-end;
-        padding: 0 2rem 0 2rem;
+        padding: 0.5rem 2rem 0 2rem;
         background-color: #353752;
 
         .text {
@@ -53,7 +51,8 @@
 
       &.lower {
         align-items: flex-start;
-        padding: 0 2rem 0 2rem;
+        padding: 0 2rem 0.5rem 2rem;
+        box-shadow: inset 0 4px 9px -6px hsla(234, 17%, 12%, 1);
         background-color: #3e4160;
 
         .text {
@@ -72,7 +71,7 @@
       transform: rotateX(0deg);
       transform-origin: bottom;
       transform-style: preserve-3d;
-      // animation: flip 800ms 200ms ease-in-out infinite both;
+      animation: flip 900ms var(--delay) infinite ease-in-out both;
 
       .flip-card {
         position: absolute;
@@ -87,7 +86,7 @@
 
         &.front {
           align-items: flex-end;
-          padding: 0 2rem 0 2rem;
+          padding: 0.5rem 2rem 0 2rem;
           background-color: #343650;
           backface-visibility: hidden;
 
@@ -98,7 +97,7 @@
 
         &.back {
           align-items: flex-start;
-          padding: 0 2rem 0 2rem;
+          padding: 0 2rem 0.5rem 2rem;
           background-color: #3e4160;
           transform: rotateY(180deg) rotateZ(180deg);
           transform-origin: center;

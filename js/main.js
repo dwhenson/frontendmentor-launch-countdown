@@ -48,8 +48,8 @@ function renderSeconds(seconds) {
 }
 
 /**
- * Render the hours into HTML
- * @param      {String}  hours    The number of hours
+ * Render the mintes into HTML
+ * @param      {String}  hours    The number of minutes
  */
 function renderMinutes(minutes) {
   minutesEl.innerHTML = `
@@ -111,7 +111,7 @@ function renderHours(hours) {
 
 /**
  * Render the days into HTML
- * @param      {String}  hours    The number of hours
+ * @param      {String}  hours    The number of days
  */
 function renderDays(days) {
   daysEl.innerHTML = `

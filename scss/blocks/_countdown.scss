@@ -71,7 +71,7 @@
       transform: rotateX(0deg);
       transform-origin: bottom;
       transform-style: preserve-3d;
-      animation: flip 900ms var(--delay) infinite ease-in-out forwards;
+      animation: flip 900ms var(--delay) infinite ease-in-out both;
 
       .flip-card {
         position: absolute;
